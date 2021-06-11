@@ -15,6 +15,7 @@ import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import IconButton from '@material-ui/core/IconButton';
+import Link from '@material-ui/core/Link';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -49,6 +50,10 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "left",
     border: "3px solid transparent",
     color: "#374b5c",
+    "&hover": {
+      cursor: "pointer",
+      color:"red"
+    }
   },
   organic: {
     // border: "2px solid black",
@@ -91,21 +96,21 @@ export default function MenuAppBar() {
             </div>
             <div className={classes.right}>
                 <Toolbar className={classes.toolbar}>
-                    <div className={`${classes.title} ${classes.selected}`}>
+                    <Link href = "#" className={`${classes.title} ${classes.selected}`}>
                         Home
-                    </div>
-                    <div className={classes.title}>
-                        Product
-                    </div>
-                    <div className={classes.title}>
+                    </Link>
+                    <Link href="#" className={classes.title}>
+                      Link
+                    </Link>
+                    <Link href="#" className={classes.title}>
                         Blog
-                    </div>
-                    <div className={classes.title}>
+                    </Link>
+                    <Link href="#" className={classes.title}>
                         About Us
-                    </div>
-                    <div className={`${classes.title} ${classes.bordered}`}>
+                    </Link>
+                    <Link href="#" className={`${classes.title} ${classes.bordered}`}>
                         Contact
-                    </div>
+                    </Link>
                 </Toolbar>
             </div>
         </div>
